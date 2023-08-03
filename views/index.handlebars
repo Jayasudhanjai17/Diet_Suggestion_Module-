@@ -1,0 +1,139 @@
+<fieldset>
+  <h1 class='text-center mb3 hed'> {{title}}</h1>
+  <h4 class='hed'>DIET SUGGESTION </h4>
+
+  {{! <select>
+  <option> 'Garlic Bread'</option>
+
+</select> }}
+  {{!-- <ul class='list-group'>
+  {{#each card}}
+    <li
+      class='list-group-item'
+    >{{this.name}}:{{this.cal}}:{{this.protien}}:{{this.fat}}</li>
+  {{/each}}
+</ul> --}}
+
+  <form action='/' method='POST' class='mb-4'>
+    <div class='form-group'>
+      <label for='name'>ENTER THE DATA IN BELOW FORMAT</label>
+      <input
+        type='text'
+        name='name'
+        class='form-control'
+        placeholder='CARDIO,BREATHING PROBLEM,DIABETES,BP'
+      />
+    </div>
+
+    <input type='submit' value='GET' class='btn btn-primary btn-block' />
+    {{!-- <ul class='list-group'>
+    {{#each calo}}
+      <li
+        class='list-group-item'
+      >{{this.name}}:{{this.cal}}:{{this.protien}}:{{this.fat}}
+      </li>
+    {{/each}}
+  </ul> --}}
+  </form>
+
+  {{!-- <h1>{{card.name}}</h1> --}}
+
+  <ul class='list-group kj'>
+    {{#each calo}}
+      <li class='list-group-item jk'>
+        {{! <img
+          src='ch.jpg'
+          alt='testimage'
+          style='height: 100 px;width: 100px;'
+        /> }}
+        <img
+          src='{{this.path}}'
+          alt='testimage'
+          style='height: 100 px;width: 100px;'
+          class='imgs'
+        />
+        <img
+          src='{{this.path2}}'
+          alt='testimage'
+          style='height: 100 px;width: 100px;'
+          class='imgs'
+        />
+        <p class='da'> {{this.itemid}}. {{this.type}}</p>
+        <p class='da'>ITEM-NAME -{{this.name}}</p>
+        <p class='da'>CALORIES-{{this.cal}}</p>
+        <p class='da'>PROTIEN -{{this.protien}}</p>
+        <p class='da'>FAT -{{this.fat}}</p>
+
+      </li>
+    {{/each}}
+  </ul>
+
+
+
+  <h1> Enter Your Choice </h1>
+ <form action='/send' method='POST' class='mb-4'>
+    <div class='form-group'>
+      <label for='email'>Email</label>
+      <input
+        type='mail'
+        name='email'
+        class='form-control'
+       
+      />
+ <label for='number'>Number</label>
+      <input
+        type='number'
+        name="number"
+        class='form-control'
+       
+      />
+    <input type='submit' value='SEND' class='btn btn-primary btn-block' />
+
+    </div>
+
+    
+    
+    {{!-- <ul class='list-group'>
+    {{#each calo}}
+      <li
+        class='list-group-item'
+      >{{this.name}}:{{this.cal}}:{{this.protien}}:{{this.fat}}
+      </li>
+    {{/each}}
+  </ul> --}}
+  </form>
+</form>
+</fieldset>
+{{!-- {{this.name}}:{{this.cal}}:{{this.protien}}:{{this.fat}} --}}
+
+{{!-- <div class='row'>
+  <div class='col-6'>
+    <ul class='list-group'>
+      {{#each calo}}
+        <li class='list-group-item'>
+          <p> {{this.bitemid}}. {{this.btype}}</p>
+          <p>ITEM-NAME -{{this.bname}}</p>
+          <p>CALORIES-{{this.bcal}}</p>
+          <p>PROTIEN -{{this.bprotien}}</p>
+          <p>FAT -{{this.bfat}}</p>
+
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class='col-6'>
+    <ul class='list-group'>
+      {{#each calo}}
+        <li class='list-group-item'>
+          <p> {{this.litemid}}. {{this.ltype}}</p>
+          <p>ITEM-NAME -{{this.lname}}</p>
+          <p>CALORIES-{{this.lcal}}</p>
+          <p>PROTIEN -{{this.lprotien}}</p>
+          <p>FAT -{{this.lfat}}</p>
+
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+</div> --}}

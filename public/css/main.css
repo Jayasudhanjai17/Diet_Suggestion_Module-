@@ -1,0 +1,25 @@
+.hed {
+  color: rgb(243, 139, 13);
+}
+.da {
+  color: rgb(0, 153, 255);
+  font-family: 'Times New Roman', Times, serif;
+}
+.kj {
+  border: 3px solid red;
+  background-color: rgb(65, 57, 57);
+}
+.jk {
+  border: 3px solid rgb(0, 255, 208);
+  background-color: white;
+}
+.full {
+  background-image: linear-gradient(to right, #f9ea8f, #aff1da);
+}
+.imgs {
+  border-radius: 5px;
+  border-right: 2px solid pink;
+  border-bottom: 1px solid black;
+  height: auto;
+  width: auto;
+}
