@@ -37,9 +37,13 @@ router.post('/', (req, res) => {
   // }
   //console.log('2nd', calo);
   let srch = req.body.name;
+  let srchf = srch.replace(/ /g,'').toUpperCase();
 
-  // console.log(srch);
-  if (srch === 'CARDIO') {
+  console.log(srchf);
+  // if(srchf!='CARDIO'||srchf!='BREATHINGPROBLEM'||srchf!='BP'||srchf!='DIABETES'){
+  //   prompt(" Please enter the valid Data ");
+  // }
+  if (srchf === 'CARDIO') {
     for (let i = 0; i < card.length; i++) {
       // console.log('j');
 
@@ -57,7 +61,7 @@ router.post('/', (req, res) => {
       title: 'Trackit',
       calo,
     });
-  } else if (srch === 'BREATHING PROBLEM') {
+  } else if (srchf === 'BREATHINGPROBLEM') {
     for (let i = 0; i < breathingproblem.length; i++) {
       calo[i] = breathingproblem[i];
       schd[i]=breathingproblem[i];
@@ -68,7 +72,7 @@ router.post('/', (req, res) => {
 
       calo,
     });
-  } else if (srch === 'DIABETES') {
+  } else if (srchf === 'DIABETES') {
     for (let i = 0; i < diabetes.length; i++) {
       calo[i] = diabetes[i];
       schd[i] = diabetes[i];
@@ -79,11 +83,13 @@ router.post('/', (req, res) => {
 
       calo,
     });
-  } else if (srch === 'BP') {
+  } else if (srchf === 'BP') {
     for (let i = 0; i < bp.length; i++) {
       calo[i] = bp[i];
       schd[i] = bp[i];
+      
       //console.log('bp', calo);
+
     }
     res.render('index', {
       title: 'Trackit',
